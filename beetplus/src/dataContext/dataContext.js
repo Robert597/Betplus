@@ -12,7 +12,7 @@ export const DataProvider = ({children}) => {
      const fetchData = async () => {
         try{
             setLoading(true);
-            const response = await axios.get("https://betplussoccer.herokuapp.com/");
+            const response = await axios.get("https://betplussoccer.herokuapp.com/data");
             console.log(response?.data);
             setData(response.data);
         }catch(err){
