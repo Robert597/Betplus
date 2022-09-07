@@ -23,24 +23,7 @@ const port = process.env.PORT || 5500
 
 
 app.get('/', (req, res) => {
-   const options = {
-    method: "GET",
-    url: 'https://api-football-v1.p.rapidapi.com/v3/fixtures/headtohead',
-    params: {h2h: '33-34'},
-    headers : {
-        'X-RapidAPI-Key':
-    '63d217a0demshec0815c456c8760p190a53jsnfa42b273f008',
-        'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
-      } 
-   }
-   axios.request(options).then(response => {
-       res.json([response.data.response.length, response.data.response[0]]);
-   }
-        ).catch((error) => 
-        console.log(error.message)
-        );
-
-        console.log("yeah");
+   res.send("Welcome to Betplus server");
    
 })
 
